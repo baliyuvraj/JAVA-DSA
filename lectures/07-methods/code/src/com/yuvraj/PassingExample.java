@@ -1,4 +1,4 @@
-package com.kunal;
+package com.yuvraj;
 
 public class PassingExample {
     public static void main(String[] args) {
