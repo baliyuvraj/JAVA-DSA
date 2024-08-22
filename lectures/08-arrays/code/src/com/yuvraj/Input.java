@@ -1,4 +1,4 @@
-package com.kunal;
+package com.yuvraj;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -43,7 +43,7 @@ public class Input {
         System.out.println(Arrays.toString(str));
 
         // modify
-        str[1] = "kunal";
+        str[1] = "yuvraj";
 
         System.out.println(Arrays.toString(str));
     }

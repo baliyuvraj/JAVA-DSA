@@ -1,4 +1,4 @@
-package com.kunal;
+package com.yuvraj;
 
 import java.util.ArrayList;
 import java.util.Scanner;
