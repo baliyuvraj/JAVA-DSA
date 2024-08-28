@@ -1,41 +1,26 @@
 import java.util.*;
- 
 public class StudentGrade {
     public static void main(String[] args) {
-        int count, i;
-        float totalMarks = 0, percentage, average;
-        Scanner scanner;
-        scanner = new Scanner(System.in);
- 
-        System.out.println("Enter Number of Subject");
-        count = scanner.nextInt();
- 
-        System.out.println("Enter Marks of " + count + " Subject");
-        for (i = 0; i < count; i++) {
-            totalMarks += scanner.nextInt();
+        grade();
+        
+    }
+    static void grade(){
+        int TotalMarks = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter total number of subjects : ");
+        int SubCount = sc.nextInt();
+        System.out.print("enter marks in " + SubCount + " subjects ");
+        for(int i = 0 ; i< SubCount ; i++){
+             TotalMarks += sc.nextInt();
         }
-         
-        System.out.println("Total MArks : " + totalMarks);
-        // Each subject is of 100 Marks
-        percentage = (totalMarks / (count * 100)) * 100;
- 
-        switch ((int) percentage / 10) {
-        case 9:
-            System.out.println("Grade : A+");
-            break;
-        case 8:
-        case 7:
-            System.out.println("Grade : A");
-            break;
-        case 6:
-            System.out.println("Grade : B");
-            break;
-        case 5:
-            System.out.println("Grade : C");
-            break;
-        default:
-            System.out.println("Grade : D");
-            break;
+        System.out.println("total marks is : " + TotalMarks);
+        float percentage = (TotalMarks/(SubCount*100))*100;
+        switch((int)percentage/10){
+            case 9 -> System.out.print("grade : A+");
+            case 8, 7 -> System.out.print("grade : A");
+            case 6 -> System.out.print("grade : B");
+            case 5 -> System.out.print("grade : C");
+            default -> System.out.print("grade : D");
         }
     }
 }
