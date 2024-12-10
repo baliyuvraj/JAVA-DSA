@@ -2,8 +2,34 @@ package com.yuvraj;
 import java.util.*;
 public class javabasics{
     public static void main(String rags[]){
-        arrays();
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+        int[][] numbers = new int[row][col];
+        for(int i = 0 ; i < row ; i++){
+            for(int j = 0 ; j < col ; j++){
+                numbers[i][j] = sc.nextInt();
+            }
+        }
+        //print
+        for(int i = 0 ; i < row ; i++){
+            for(int j = 0 ; j < col ; j++){
+                System.out.print(numbers[i][j]+ " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("enter a number to be searched : ");
+        int x = sc.nextInt();
+        for(int i = 0 ; i < row ; i++){
+            for(int j = 0 ; j < col ; j++){
+                if(numbers[i][j] == x){
+                    System.out.print("number found at location : " + i + "," + j);
+                }
+            }
+        }
     }
+   
     static void arrays(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of rows");

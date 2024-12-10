@@ -1,10 +1,12 @@
 import java.util.*;
-public class linear{
-    public static void main(String args[]){
+public class lineararray{
+    public static void main (String args[]){
         Scanner sc = new Scanner(System.in);
         String arr = "Yuvraj123";
-        char target = 'u' ;        
-        System.out.print(StrSearch(arr,target));
+        // char target = 'u' ;        
+        int[] nums = {29,89,45,69,78,56};
+        int target = 29 ;
+        System.out.print(LinearSearch2(nums,target));
     }
     static int linearSearch(int[] arr , int target){
         if(arr.length == 0){
@@ -42,4 +44,19 @@ public class linear{
         }
         return false ;
     }
+
+    static int LinearSearch2(int[] arr , int target){
+    if(arr.length == 0){
+        return -1 ;
+    }
+    for(int index = 0 ; index < arr.length ; index++ ){
+        int element = arr[index];
+        if(element == target){
+            return index ; 
+        }
+    }
+    return -1 ;
 }
+
+}
+
