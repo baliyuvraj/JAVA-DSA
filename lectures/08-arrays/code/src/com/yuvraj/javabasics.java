@@ -5,26 +5,24 @@ public class javabasics{
         Scanner sc = new Scanner(System.in);
         int row = sc.nextInt();
         int col = sc.nextInt();
-        int[][] numbers = new int[row][col];
+        int[][] numbers = new int[row][col] ;
         for(int i = 0 ; i < row ; i++){
             for(int j = 0 ; j < col ; j++){
                 numbers[i][j] = sc.nextInt();
             }
         }
         //print
-        for(int i = 0 ; i < row ; i++){
-            for(int j = 0 ; j < col ; j++){
-                System.out.print(numbers[i][j]+ " ");
-            }
-            System.out.println();
+        for(row = 0 ; row < numbers.length ; row ++){
+            System.out.println(Arrays.toString(numbers[row]));
         }
 
-        System.out.println("enter a number to be searched : ");
+        //searching
+        System.out.print("Enter element to be searched : ");
         int x = sc.nextInt();
         for(int i = 0 ; i < row ; i++){
             for(int j = 0 ; j < col ; j++){
                 if(numbers[i][j] == x){
-                    System.out.print("number found at location : " + i + "," + j);
+                    System.out.print("element found at location "+ i + " " + j);
                 }
             }
         }
