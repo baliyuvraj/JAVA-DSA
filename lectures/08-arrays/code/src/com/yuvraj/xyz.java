@@ -13,6 +13,6 @@ public class xyz{
             str[i] = sc.next();
         }
         System.out.print(Arrays.toString(str));
-        
+            
     }
 }

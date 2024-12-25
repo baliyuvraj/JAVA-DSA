@@ -1,19 +1,19 @@
- //concatenantion of array
- import java.util.*;
- class ques2{
-    public int[] getConcatination(int[] nums){
+//concatinantion of arrays
+import java.util.* ;
+public class ques2{
+    public static void main(String args[]){
+        int[] nums = {1,2,1};
+        System.out.println(Arrays.toString(nums));
+        System.out.print(Arrays.toString(quest2(nums)));
+
+    }
+    static int[] quest2(int[] nums){
         int n = nums.length ;
-        int[] ans = new int[2 * n];
-        for(int i = 0 ; i < n ; i++){
+        int[] ans = new int[2*n];
+        for(int i = 0 ; i < nums.length ; i++){
             ans[i] = nums[i];
             ans[i+n] = nums[i];
-        } 
-        return ans;
+        }
+        return ans ;
     }
-
-    public static void main(String args[]){
-        int[] nums = {1,3,2,1};
-        ques2 obj = new ques2();
-        System.out.print(Arrays.toString(obj.getConcatination(nums)));
-    }
- }
+}
