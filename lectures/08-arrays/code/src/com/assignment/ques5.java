@@ -1,24 +1,16 @@
-//kids with greatest number of candies
+//shuffle the array
 import java.util.*;
-class ques5{
-    public List<Boolean> kidsWithCandies(int[] candies , int extraCandies){
-        List<Boolean> res = new ArrayList<>();
-        int[] temp = candies.clone();
-        Arrays.sort(temp);
-        for(int i = 0 ; i < candies.length ; i++){
-            if(candies[i] + extraCandies >= temp[candies.length - 1]){
-                res.add(true);
-            }
-            else{
-                res.add(false);
-            }
-        }
-        return res ;
-    }
+public class ques5{
     public static void main(String args[]){
-        int[] candies = {2,3,5,1,3};
-        int extraCandies = 3 ;
-        ques5 obj = new ques5();
-        System.out.print(obj.kidsWithCandies(candies, extraCandies));
+        int[] nums = {2,5,1,3,4,7};
+        int[] arr = new int[nums.length];
+        int n = 3 ;
+        int count = 0 ;
+        for(int i = 0 ; i < n ; i++){
+            arr[count] = nums[i];
+            arr[count + 1] = nums[i+n];
+            count = count + 2 ;
+        }
+        System.out.print(Arrays.toString(arr));
     }
 }

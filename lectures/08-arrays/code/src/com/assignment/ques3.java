@@ -1,17 +1,11 @@
-//runnins sum of 1d array
+//running sum of 1D array
 import java.util.*;
-class ques3{
-    public int[] runningSum(int[] nums){
-        for(int i = 1 ; i < nums.length ; i++){
-            nums[i] += nums[i-1]; 
-        }
-        return nums;
-    }
-
+public class ques3{
     public static void main(String args[]){
-        int[] nums = {1,1,1,1,1};
-        ques3 obj = new ques3();
-        System.out.print(Arrays.toString(obj.runningSum(nums)));
-
+        int[] arr = {3,1,2,10,1};
+        for(int i = 1 ; i < arr.length ; i++){
+            arr[i] = arr[i] + arr[i-1];
+        }
+        System.out.print(Arrays.toString(arr));
     }
 }
